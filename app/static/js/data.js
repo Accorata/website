@@ -1,5 +1,5 @@
-function send_data(name) {
-  console.log("aaaa");
+function send_data() {
+  let name = document.getElementById("name_text").value;
   jQuery.ajax({
     url: '/process_sent_data',
     type: 'POST',
