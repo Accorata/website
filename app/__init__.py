@@ -1,7 +1,6 @@
-# print("sdjfh")
-
 from flask import Flask, render_template, redirect, request
 import sqlite3
+from db import *
 
 app = Flask(__name__)
 
@@ -16,7 +15,7 @@ def load_data () :
 @app.route("/process_sent_data", methods=['POST'])
 def process_sent_data () :
     name = request.form.get("name")
-    print("name: "+name)
+    add_new_painting(name)
     return "Done"
 
 if __name__ == "__main__":
