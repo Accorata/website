@@ -10,6 +10,7 @@ def load_main () :
 
 @app.route("/data", methods=['GET'])
 def load_data () :
+    # print(get_paintings())
     return render_template("data.html")
 
 @app.route("/process_sent_data", methods=['POST'])
