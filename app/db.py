@@ -26,7 +26,7 @@ def add_new_painting(painting_name):
 
 def get_painting(painting_name):
     c = db.cursor()
-    painting = c.execute("select * from paintings where name=?", (painting_name,)).fetchone()
+    painting = c.execute("select * from paintings where name=?", (painting_name,)).fetchall()
     c.close()
     return painting
 
