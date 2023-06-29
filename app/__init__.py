@@ -13,6 +13,10 @@ def load_data () :
     # print(get_paintings())
     return render_template("data.html")
 
+@app.route("/list", methods=['GET'])
+def load_list () :
+    return render_template("list.html")
+
 @app.route("/process_sent_data", methods=['POST'])
 def process_sent_data () :
     name = request.form.get("name")
